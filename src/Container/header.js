@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Register from "../Pages/register";
+import RegisterBusiness from "../Pages/business";
 import Home from "../Pages/Home";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -33,11 +34,11 @@ const Header = ()=> {
 
              
 
-              {/* <Nav>
-                <Link to={"/student-list"} className="nav-link">
-                  Student List
+              { <Nav>
+                <Link to={"/businessregister"} className="nav-link">
+                Register Business
                 </Link>
-              </Nav> */}
+              </Nav> }
             </Nav>
 
           </Container>
@@ -51,6 +52,7 @@ const Header = ()=> {
               <Switch>
               <Route path="/" exact component={Home} />
                 <Route path="/register" component={Register} />
+                <Route path="/businessregister" component={RegisterBusiness} />
               </Switch>
             </div>
           </Col>
