@@ -1,0 +1,132 @@
+.user-form-cont{
+    background: linear-gradient(to right top, #f1c67a, #c79a4d);
+    height: 100vh;
+    width: 100vw;
+}
+
+.user-reg-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background:linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.3)
+        );
+
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80%;
+    border-radius: 2em;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+.picture-upload{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.3)
+        );
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 2em;
+
+}
+
+.picture-upload p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #333;
+}
+
+.inputs{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5rem;
+}
+
+.inputs input, .business-description{
+    background:linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.3)
+        );
+        border:none;
+        padding: 0.5em;
+        border-radius: 0.5em;
+}
+
+.business-description{
+    resize: none;
+    margin-bottom: 1em;
+}
+
+.avatar{
+    height: 6em;
+    margin: auto;
+}
+
+#file, #logo{
+    display: none;
+}
+
+.names, .merged-fields{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.names input, .merged-fields input{
+    width: 45%;
+}
+
+#last-name, #phone, #confirm, #business-nature, #business-category{
+    margin-left: 10%;
+}
+
+.submit-registration{
+    background-color: rgb(38,130,255);
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: antiquewhite;
+}
+
+.uploader{
+    background: rgb(38,130,255);
+    padding: 1em;
+    display: flex;
+    border-radius: 3em;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    color: white;
+    width: 220px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.picture-cont{
+    background:#f1c67a;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid white;
+    border-radius: 50%;
+}
+
+.remove-image{
+    border:none;
+    background: none;
+    position: absolute;
+    top:150px;
+    left:250px;
+    font-size: 2em;
+}

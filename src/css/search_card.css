@@ -1,0 +1,107 @@
+.each-search-cont{
+    background:linear-gradient(to right top, #eebf6d, #c79a4d);
+    border-radius: 1rem;
+}
+
+.form-cont{
+    position: fixed;
+    width: 100%;
+    background-image: url('../cover_images/search_bg1.png');
+    padding: 3em;
+    height: 300px;
+}
+
+.search-result-container{
+
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 20em;
+    z-index: -1;
+    
+    
+
+}
+.business-search-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    border-radius: 1rem;
+    margin-top: 2em;
+    width: 600px;
+    height: 110px;
+    
+    
+}
+
+
+.business-logo{
+    border-radius:50%;
+    height: 6em;
+    width: 6em;
+}
+
+.average-rating{
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.rating-value{
+    color:#333;
+}
+
+.star{
+    color:yellow;
+}
+
+.business-name{
+    text-align: center;
+    margin-left: 2em;
+    color:#333;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+
+.search-form{
+    
+    display: flex;
+    margin: block;
+    width: 100%;
+    position: relative;
+}
+.search-input{
+    border:none;
+    width: 100%;
+
+}
+
+.search-form button{
+    border:none;
+}
+
+.search-button{
+    width: 3em;
+}
+
+.search-heading{
+    text-align: center;
+    padding: 1em;
+    color:white;
+}
+
+.search-counter{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    top:70%;
+    left: 50%;
+    font-weight: bold;
+    z-index: -100000000;
+}
