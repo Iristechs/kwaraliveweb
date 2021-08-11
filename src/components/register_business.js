@@ -80,8 +80,7 @@ const BusinessRegisteration=()=>{
     const [isPending, setIspending] = useState(false)
     const [registrationComplete, setRegistrationComplete] = useState(false)
     const [transactionID, setTransactionID] = useState('')
-    var businessData = {businessimages, businessLogo, first_name, last_name, email, phone_number, address, password, business_name,
-                        confirmPassword, website_url}
+    
     
     const maxNumber = 5;
 
@@ -110,6 +109,26 @@ const BusinessRegisteration=()=>{
 
       const handleSubmit=(e)=>{
         e.preventDefault();
+        
+        if (transactionID.length > 0){
+  
+          var businessData = {businessimages, first_name, last_name, email, phone_number, address, password, business_name, transactionID, category}
+
+          if (business_description.length > 0){
+            businessData.business_description = business_description
+          }
+
+          if (website_url.length > 0){
+            businessData.website_url = website_url
+          }
+
+          if (businessLogo.length > 0){
+            businessData.logo = businessLogo
+          }
+        }
+
+        console.log(businessData)
+
         
       
 
@@ -144,7 +163,7 @@ const BusinessRegisteration=()=>{
     
     return(
         <div className='user-form-cont'>
-            <form className='user-reg-form'>
+            <form className='user-reg-form' onSubmit={handleSubmit}>
                 <div className='picture-upload'>
             
                     <ImageUploading
