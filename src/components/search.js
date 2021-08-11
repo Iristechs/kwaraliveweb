@@ -12,7 +12,7 @@ const SearchInput=()=>{
         e.preventDefault()
         console.log(query)
 
-        fetch('http://localhost:5000/v1/business/search?search='+query,{
+        fetch('business/search?search='+query,{
             method: 'GET',
             headers:{
                 'Content-type':'application/json',

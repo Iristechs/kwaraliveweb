@@ -43,10 +43,6 @@ function App() {
                   
                     
                 <Route path='/sign-up/register-user'>
-                    <Register />  
-                </Route>
-
-                <Route path='/sign-up/test'>
                     <UserRegisteration />  
                 </Route>
 
