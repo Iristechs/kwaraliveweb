@@ -11,7 +11,6 @@ const Home = () =>{
         <div className='homepage-container'>
             <CoverPage />
             <Menu />
-            <RandomBusinesses />
         </div>
     )
 }

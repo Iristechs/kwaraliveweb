@@ -8,6 +8,7 @@ import UserRegisteration from './components/register_user';
 import BusinessRegisteration from './components/register_business';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Register from './components/register';
+import Footer from './components/footer';
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
                 {/* Home page Router */}
                 <Route exact path='/'>
                     <Nav />  
-                    <Home />  
+                    <Home />
+                    <Footer />  
                 </Route>
 
                 {/* Sign Up page Router */}
@@ -32,6 +34,7 @@ function App() {
                 <Route exact path='/sign-up'>     
                     <Nav />           
                     <SignUp />  
+                    <Footer />  
                 </Route>
 
                 {/* Search page Router */}

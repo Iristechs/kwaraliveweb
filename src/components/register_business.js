@@ -84,7 +84,7 @@ const BusinessRegisteration=()=>{
     
     const maxNumber = 5;
 
-    console.log(transactionID)
+    
   
     const onChangeBusinessImages = (imageList, addUpdateIndex) => {
       // data for submit
@@ -163,7 +163,7 @@ const BusinessRegisteration=()=>{
     
     return(
         <div className='user-form-cont'>
-            <form className='user-reg-form' onSubmit={handleSubmit}>
+            <form className='user-reg-form'>
                 <div className='picture-upload'>
             
                     <ImageUploading

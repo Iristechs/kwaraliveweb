@@ -47,7 +47,7 @@ a{
 }
 
 
-#caption3{
+#caption3, #caption4, #caption5{
     position: absolute;
     width: fit-content;
     top:-100px;
@@ -58,7 +58,7 @@ a{
     
 }
 
-#call-to-action3{
+#call-to-action3, #call-to-action4, #call-to-action5{
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.5em;
@@ -69,6 +69,7 @@ a{
     height:0.3em;
     background-color: #dcac5a;
     width: 130px;
+    
     
 
 }

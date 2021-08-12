@@ -51,6 +51,7 @@
 .menu-title{
     color:#426696;
     opacity: 0.8;
+    text-decoration: none;
 
 }
 
@@ -68,3 +69,57 @@
     width: 20%;
     
 }
+
+.category-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 2em;
+    border:1px solid black;
+    width: fit-content;
+    
+}
+
+.categories{
+    border:1px solid black;
+    padding:1em;
+    
+}
+
+.business-images{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.business-names{
+    color:rgb(255, 38, 0);
+    text-decoration: none;
+}
+
+.carousel-wrapper{
+    background-color: rgba(0,0,0,.9);
+    padding: 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5em;
+    border-radius: 1em;
+}
+
+.carousel-wrapper .carousel-inner{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.carousel-wrapper .carousel-slide{
+    display: flex;
+    flex-direction: column;
+    
+    width: fit-content;
+    margin: auto;
+}
+

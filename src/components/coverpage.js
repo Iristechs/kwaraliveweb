@@ -17,7 +17,7 @@ const CoverPage = () =>{
                     <Carousel.Caption>
                         <div id='caption1'>
                             <div className='line'></div>
-                            <Link id='call-to-action1' to='/'>Get started</Link>
+                            <Link id='call-to-action1' to='/sign-up'>Get started</Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -38,7 +38,7 @@ const CoverPage = () =>{
                     <Carousel.Caption>
                     <div id='caption3'>
                             <div className='line'></div>
-                            <Link id='call-to-action3' to='/'>register</Link>
+                            <Link id='call-to-action3' to='/sign-up'>register</Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -48,7 +48,8 @@ const CoverPage = () =>{
 
                     <Carousel.Caption>
                     <div id='caption4'>
-                            <Link id='call-to-action4' to='/'>register</Link>
+                            <div className='line'></div>
+                            <Link id='call-to-action4' to='/sign-up'>register</Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -58,7 +59,8 @@ const CoverPage = () =>{
 
                     <Carousel.Caption>
                     <div id='caption5'>
-                            <Link id='call-to-action5' to='/'>register</Link>
+                            <div className='line'></div>
+                            <Link id='call-to-action5' to='/sign-up'>register</Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
