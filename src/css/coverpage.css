@@ -75,7 +75,7 @@ a{
 }
 
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:570px) {
     #img3{
         height: 250px;
     }

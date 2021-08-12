@@ -130,7 +130,7 @@
     justify-content: center;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:570px) {
     .category-wrapper{
         flex-wrap: wrap;
         flex-direction: column;
