@@ -12,7 +12,7 @@ const SearchInput=()=>{
         e.preventDefault()
         console.log(query)
 
-        fetch('business/search?search='+query,{
+        fetch('https://kwaralive.herokuapp.com/v1/business/search?search='+query,{
             method: 'GET',
             headers:{
                 'Content-type':'application/json',

@@ -46,3 +46,23 @@ a{
     color:greenyellow
 }
 
+
+
+@media only screen and (max-width:500px) {
+    .links{
+        font-size: 5px;
+    }
+
+    li img{
+        display: none;
+    }
+
+    li{
+        padding: 0;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+}

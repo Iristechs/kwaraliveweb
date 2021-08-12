@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
 const menus = [
     {id:1,icon:'images/call.png', menu:'call a police', link:'/'},
     {id:2,icon:'images/top100.png', menu:'Top 100', link:'/'},
@@ -31,7 +32,7 @@ const Menu = () =>{
     const [isFetchingBusinesses, setFetchingBusinesses] = useState(true)
 
     useEffect(()=>{
-        fetch('https://kwaralive.herokuapp.com/v1/business-categories', {headers : {
+        fetch('https://kwaralive.herokuapp.com/v1//business-categories', {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
@@ -121,7 +122,7 @@ const Menu = () =>{
 
                     <Carousel.Caption>
                         <div className='business-names-caption'>
-                            <Link className='business-names' to='/sign-up'><h4>{data.business_name}</h4></Link>
+                            <Link className='business-names' to={'/business-profile/' + data.id + '/'+Date.now()}><h4>{data.business_name}</h4></Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>

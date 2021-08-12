@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/search_card.css';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const SearchCard = ({businesses, query})=>{
@@ -15,7 +16,7 @@ const SearchCard = ({businesses, query})=>{
                         <div  className='business-search-container'>
                             {/*<link rel='preload' href={business.logo}/>*/}
                             <img src={business.logo} className='business-logo'/>
-                            <p className='business-name'>{business.business_name}</p>
+                            <Link to={'/business-profile/' + business.id + '/'+Date.now()} className='business-name'>{business.business_name}</Link>
                             <div className='average-rating'>
                                 <p className='rating-value'>{business.average_rating}</p>
                                 <FaStar className='star'/>

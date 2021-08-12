@@ -9,6 +9,7 @@ import BusinessRegisteration from './components/register_business';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Register from './components/register';
 import Footer from './components/footer';
+import BusinessProfile from './components/businessProfiles/businessProfile';
 
 function App() {
 
@@ -53,6 +54,10 @@ function App() {
                 
                 <Route path='/sign-up/register-business'> 
                     <BusinessRegisteration />  
+                </Route>
+
+                <Route path='/business-profile/:id'> 
+                    <BusinessProfile />  
                 </Route>
               </Switch>
               
