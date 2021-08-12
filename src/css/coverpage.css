@@ -76,9 +76,6 @@ a{
 
 
 @media only screen and (max-width:570px) {
-    #img3{
-        height: 250px;
-    }
 
     #caption1{
         top: -10px;

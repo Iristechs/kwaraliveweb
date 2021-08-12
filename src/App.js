@@ -33,9 +33,9 @@ function App() {
                 
     
                 <Route exact path='/sign-up'>     
-                    <Nav />           
+                       
                     <SignUp />  
-                    <Footer />  
+             
                 </Route>
 
                 {/* Search page Router */}
