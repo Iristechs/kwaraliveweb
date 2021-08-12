@@ -58,11 +58,15 @@ a{
     }
 
     li{
-        padding: 0;
+        padding: 0.5em;
     }
 
     ul{
         padding: 0;
+        position:static;
+        margin: auto;
+        left: 0;
+        transform: translateX(0);
     }
 
 }
