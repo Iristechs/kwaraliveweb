@@ -18,7 +18,8 @@ const menus = [
     {id:7,icon:'images/categories.png', menu:'Business Categories', link:'/'},
     {id:8,icon:'images/award.png', menu:'Kwaralive award', link:'/'},
     {id:9,icon:'images/insurance.png', menu:'Are you insured', link:'/'},
-    {id:10,icon:'images/download.png', menu:'mobile app ', link:'/'}
+    {id:10,icon:'images/search.png', menu:'search', link:'/search'},
+    {id:11,icon:'images/download.png', menu:'mobile app ', link:'/'}
 ]
 
 
