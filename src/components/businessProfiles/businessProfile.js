@@ -9,7 +9,7 @@ const BusinessProfile=()=>{
     const { id } = useParams()
 
     useEffect(()=>{
-        fetch(`/business/search?id=${id}`, {headers : {
+        fetch(`https://kwaralive.herokuapp.com/v1/business/search?id=${id}`, {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }

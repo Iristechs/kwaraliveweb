@@ -45,7 +45,7 @@ const UserRegisteration=()=>{
           setPasswordMatch(true)
 
           setIspending(true)
-          fetch('https://kwaralive.herokuapp.com/v1//user/register', {
+          fetch('https://kwaralive.herokuapp.com/v1/user/register', {
             method: 'POST',
             headers: {
               'Content-type':'application/json',
