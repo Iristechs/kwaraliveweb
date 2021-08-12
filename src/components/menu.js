@@ -104,7 +104,7 @@ const Menu = () =>{
                         <p>{data.category}</p>
                     </div>
                 ))}
-            </div> : <p>Fetching Categories</p>}
+            </div> : <div className='loader-wraper'><img className ='loader' src ='../images/loader.gif' /></div>}
 
 
             <div className='heading'>

@@ -124,4 +124,8 @@
 }
 
 
-
+.loader-wraper{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
