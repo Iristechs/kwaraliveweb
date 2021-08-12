@@ -32,7 +32,7 @@ const Menu = () =>{
     const [isFetchingBusinesses, setFetchingBusinesses] = useState(true)
 
     useEffect(()=>{
-        fetch('https://kwaralive.herokuapp.com/v1//business-categories', {headers : {
+        fetch('https://kwaralive.herokuapp.com/v1/business-categories', {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
