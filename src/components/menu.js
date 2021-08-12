@@ -31,7 +31,7 @@ const Menu = () =>{
     const [isFetchingBusinesses, setFetchingBusinesses] = useState(true)
 
     useEffect(()=>{
-        fetch('/business-categories', {headers : {
+        fetch('https://kwaralive.herokuapp.com/v1/business-categories', {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
@@ -127,7 +127,7 @@ const Menu = () =>{
                 </Carousel.Item>
                 ))}
             </Carousel> 
-            </div>  : <p>Fetching Categories</p>}
+            </div>  : <div className='loader-wraper'><img className ='loader' src ='../images/loader.gif' /></div>}
             
 
             
