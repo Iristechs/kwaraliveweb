@@ -73,3 +73,25 @@ a{
     
 
 }
+
+
+@media only screen and (max-width:500px) {
+    #img3{
+        height: 250px;
+    }
+
+    #caption1{
+        top: -10px;
+    }
+    #call-to-action1, #call-to-action4, #call-to-action3, #call-to-action5{
+        font-size: 15px;
+    }
+
+    .line{
+        width: 50px;
+        height: 0.1em;
+    }
+    #caption3, #caption4, #caption5{
+        top:10px;
+    }
+}

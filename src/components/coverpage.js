@@ -11,7 +11,7 @@ const CoverPage = () =>{
 
         <div className='cover-page'>
             <Carousel controls={false} interval={3000} indicators= {false} fade={true}>
-                <Carousel.Item >
+                {/*<Carousel.Item >
                     <img className='d-block w-100' src='images/one.png' alt=''/>
 
                     <Carousel.Caption>
@@ -20,20 +20,12 @@ const CoverPage = () =>{
                             <Link id='call-to-action1' to='/sign-up'>Get started</Link>
                         </div>
                     </Carousel.Caption>
-                </Carousel.Item>
-
-                {/*<Carousel.Item >
-                    <img className='d-block w-100' src='images/two.png' alt=''/>
-
-                    <Carousel.Caption>
-                    <div id='caption2'>
-                            <Link id='call-to-action2' to='/'>Get started</Link>
-                        </div>
-                    </Carousel.Caption>
                 </Carousel.Item>*/}
 
+               
+
                 <Carousel.Item >
-                    <img className='d-block w-100' src='images/three.png' alt=''/>
+                    <img id='img3' className='d-block w-100' src='images/three.png' alt=''/>
 
                     <Carousel.Caption>
                     <div id='caption3'>

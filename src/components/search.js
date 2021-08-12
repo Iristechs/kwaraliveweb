@@ -47,7 +47,7 @@ const SearchInput=()=>{
             
 
     
-            {result.length > 0 && <p className='search-counter'>{result.length} search result for {query}</p>}
+            {result.length > 0 ? <p className='search-counter'>{result.length} search result for {query}</p> : <div className='loader-wraper'><img className ='loader' src ='../images/loader.gif' /></div>}
             <SearchCard businesses = {result} query= {query}/>
             
         </div>
