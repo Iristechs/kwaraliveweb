@@ -52,7 +52,7 @@ const Menu = () =>{
 
     useEffect(()=>{
         
-        fetch('/business/top-100', {headers : {
+        fetch('https://kwaralive.herokuapp.com/v1/business/top-100', {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
