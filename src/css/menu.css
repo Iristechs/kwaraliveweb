@@ -132,7 +132,6 @@
 
 @media only screen and (max-width:500px) {
     .category-wrapper{
-        background: red;
         flex-wrap: wrap;
         flex-direction: column;
     }
