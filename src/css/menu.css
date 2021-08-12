@@ -153,6 +153,14 @@
     .menu-title{
         font-size: 12px;
     }
+
+    .category-wrapper{
+        width: 300px;
+    }
+    .categories{
+        width: auto;
+        text-align: center;
+    }
 }
 
 
