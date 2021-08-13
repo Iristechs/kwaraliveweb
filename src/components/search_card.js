@@ -14,13 +14,14 @@ const SearchCard = ({businesses, query})=>{
             {businesses.map((business)=>(
                     <main className='each-search-cont' key={business.id}>
                         <div  className='business-search-container'>
+                            <div className='average-rating'>
+                                    <p className='rating-value'>{business.average_rating}</p>
+                                    <FaStar className='star'/>
+                                </div>
                             {/*<link rel='preload' href={business.logo}/>*/}
                             <img src={business.logo} className='business-logo'/>
                             <Link to={'/business-profile/' + business.id + '/'+Date.now()} className='business-name'>{business.business_name}</Link>
-                            <div className='average-rating'>
-                                <p className='rating-value'>{business.average_rating}</p>
-                                <FaStar className='star'/>
-                            </div>
+                            
                             
                         </div>
                     </main>
