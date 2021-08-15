@@ -7,11 +7,14 @@ const SearchInput=()=>{
 
     const [query, setQuery] = useState('');
     const [result, setResult] = useState([]);
+    const [searching, setSearching] = useState(false)
+    
+    
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(query)
-
+        
+        setSearching(true)
         fetch('https://kwaralive.herokuapp.com/v1/business/search?search='+query,{
             method: 'GET',
             headers:{
@@ -22,8 +25,13 @@ const SearchInput=()=>{
             if(response.ok){
                 return response.json()
             }
-        }).then(data => setResult(data.search_result))
+        }).then(data =>{
+            setResult(data.search_result)
+            setSearching(false)
+        } )
 
+        
+                
     }
     return(
         <div className='main-cont'>
@@ -47,8 +55,9 @@ const SearchInput=()=>{
             
 
     
-            {result.length > 0 ? <p className='search-counter'>{result.length} search result for {query}</p> : <div className='loader-wraper' id='search-loader'><img className ='loader' src ='../images/loader.gif' /></div>}
-            <SearchCard businesses = {result} query= {query}/>
+            
+            
+            <SearchCard businesses = {result} query= {query} searching={searching}/>
             
         </div>
     )

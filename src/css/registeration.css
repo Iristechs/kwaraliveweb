@@ -1,5 +1,5 @@
 .user-form-cont{
-    background: linear-gradient(to right top, #f1c67a, #c79a4d);
+    background: linear-gradient(to right top, rgb(171, 189, 129, 0.7), rgb(171, 189, 129, 0.3));
     height: 100vh;
     width: 100vw;
 }

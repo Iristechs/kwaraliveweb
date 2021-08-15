@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import '../../css/business_profile.css'
+import '../../css/business_profile.css';
+import { FaStar } from 'react-icons/fa';
+import ReactMarkdown from "react-markdown";
+import ReadMoreReact from 'read-more-react';
+
+
 
 
 const BusinessProfile=()=>{
@@ -22,14 +27,14 @@ const BusinessProfile=()=>{
                 data => {
                     setProfile(data.search_result[0])
                     setFetching(false)
-                    console.log(businessProfile)
+                    
                     
                 })
             
     }, [id])
 
     return(
-        <div>
+        <div className='business-profile-bg'>
 
 
             {
@@ -39,31 +44,77 @@ const BusinessProfile=()=>{
                 <div className='business-profile-wrapper'>
                     <div className='upper-card'>
                         <hr/>
-                            {console.log(businessProfile.logo)}
-                            <img className='business-logo' src={businessProfile.logo}/>
+                            <div className='business-logo'>
+                                <img src={businessProfile.logo}/>
+                            </div>
                             
-                            <h3>{businessProfile.business_name}</h3>
-                            <p className='business-profile-categories'>{businessProfile.category}</p>
-                            <div className='address-wrapper'><img className='location' src='../../images/location.png'/><p>{businessProfile.address}</p></div>
+                            <div className='profile-details'>
+                                <span><h3 className='owners-name'>{businessProfile.business_name}  . </h3> <p className='business-profile-categories'>{businessProfile.category}</p></span>
+                                
+                                <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
+                                <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>
+                            </div>
+                            
+                            
                     </div>
 
-                    <div className='lower-card'>
-                        <p className='business-description-header'>Business Description</p>
-                        <p className='business-profile-description'>{businessProfile.business_description}</p>
+                    <div className='lower-card1'>
                         
-                        <p className='rating-header'>Reviews</p>
-                        {businessProfile.ratings.map((rating)=>(
-                            <div key={rating.id}>
-                                <div  className='ratings'>
-                                    <div><p>{rating.rating_text}</p><p>{rating.reviewer}</p></div>
-                                </div>
+                    </div>
+
+                    <div className='lower-card2'>
+                        <h5 className='business-description-header'>Business Description</h5>
+                            {/*<p className='business-profile-description'>{businessProfile.business_description}</p>*/}
+                            
+                            {/*<p><ReadMoreReact className='business-profile-description' text={businessProfile.business_description}/></p>*/}
+                            <ReactMarkdown className='business-profile-description' children={businessProfile.business_description}/>
+                                  
                                 
-                            </div>
-                        ))}
+                        
+                    </div>
+
+                    <div className='lower-card3'>
+                    <h5 className='rating-header'>Reviews</h5>
+                            {businessProfile.ratings.map((rating)=>(
+                                <div key={rating.id}>
+                                    <div>
+                                        <div className='ratings'>
+                                            <p className='rater-name'>{rating.reviewer}</p>
+                                                <div className='star-ratings'>
+                                                    
+                                                    {[...Array(5)].map((star, i)=>{
+                                                        var ratingValue = i + 1
+
+                                                        return (
+
+                                                            
+                                                                <FaStar
+                                                                    className='star'
+                                                                    key = {i}
+                                                                    color = { ratingValue <= rating.rating_value ? '#f8b26a' : 'gray'}
+                                                                />
+
+                                                                
+                                                            
+                                                            
+                                                        )
+                                                    })}
+                                                    <p className='rating-date'>{rating.date}</p>
+                                                </div>
+                                            <p className='rating-text'>{rating.rating_text}</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            ))}
                     </div>
                 </div> :  <div className='loader-wraper'><img className ='loader' src ='../../images/loader.gif' /></div>
 
+                
+
+
                 }
+                
         </div>
     )
 }

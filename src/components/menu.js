@@ -79,20 +79,25 @@ const Menu = () =>{
             <h2 >POPULAR RIGHT NOW</h2>
             <hr className='divider'/>
         </div>
+
         
-        <main className='main'>
-                <div className='menu-list'>
-                {menus.map((menu)=>(
-                    <div key={menu.id}>
-                        <div  className='activities'>
-                            <Link to={menu.link}><img className='menu-images'  src = {menu.icon} /></Link>
-                            <Link to={menu.link} className='menu-title'>{menu.menu}</Link>
+            <main className='main'>
+                    <div className='menu-list'>
+                    {menus.map((menu)=>(
+                        <div key={menu.id}>
+                            
+                                <div  className='activities'>
+                                    <Link to={menu.link}><img className='menu-images'  src = {menu.icon} /></Link>
+                                    <Link to={menu.link} className='menu-title'>{menu.menu}</Link>
+                                </div>
+                            
                         </div>
-                        
-                    </div>
-                ))}
-            </div>
-        </main>
+                    ))}
+                </div>
+            </main>
+        
+        
+        
 
         <div className='heading'>
             <h2>TOP CATEGORIES FOR YOU</h2>

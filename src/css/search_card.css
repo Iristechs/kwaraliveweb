@@ -1,7 +1,24 @@
 .each-search-cont{
-    background:linear-gradient(to right top, #eebf6d, #c79a4d);
+    background:linear-gradient(to right top, #f8b26a, #c79a4d);
     border-radius: 1rem;
-   
+    width: 300px;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 2em;
+    transition: 0.5s; 
+}
+
+.each-search-cont:hover{
+    transform: translateY(-10%);
+    background:linear-gradient(to right top, #f8b26a, #f8b26a);
+}
+
+.search-cont{
+    
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .form-cont{
@@ -17,8 +34,9 @@
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    margin-top: 20em;
+    margin-top: 25em;
     z-index: -1;
+   
     
     
 
@@ -26,14 +44,14 @@
 .business-search-container{
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: auto;
     justify-content: space-between;
     align-items: center;
     padding: 2em;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
     border-radius: 1rem;
-    margin-top: 2em;
+    
 
     
     
@@ -78,6 +96,10 @@
     font-weight: bold;
     text-decoration: none;
     padding: 0.5em;
+}
+
+.business-name:hover{
+    color: #abbd81;
 }
 
 
