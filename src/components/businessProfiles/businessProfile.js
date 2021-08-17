@@ -45,25 +45,21 @@ const BusinessProfile=()=>{
 
                 <div className='business-profile-wrapper'>
                     <div className='upper-card'>
-                        <hr/>
                             <div className='business-logo'>
                                 <img src={businessProfile.logo}/>
                             </div>
-                            
-                            <div className='profile-details'>
-                                <div className='span'><h3 className='owners-name'>{businessProfile.business_name}  . </h3> <p className='business-profile-categories'>{businessProfile.category}</p></div>
-                                <div className='address-email-wrapper'>
-                                    <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
-                                    <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>
-                                </div>
-                                
-                            </div>
-                            
-                            
+                                                        
                     </div>
 
                     <div className='lower-card1'>
-                        
+                        <div className='profile-details'>
+                            <div className='span'><h3 className='owners-name'>{businessProfile.business_name}  . </h3> <p className='business-profile-categories'>{businessProfile.category}</p></div>
+                            <div className='address-email-wrapper'>
+                                <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
+                                <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>
+                            </div>
+                                    
+                        </div>
                     </div>
 
                     <div className='lower-card2'>
