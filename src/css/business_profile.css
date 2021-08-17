@@ -42,7 +42,7 @@
     color: black;
     margin-top: 10em;
     margin-left: 2em;
-    justify-content: space-between;
+    
     
 
 }
@@ -75,11 +75,10 @@
 
 .location, .email{
     height: 2em;
-    margin: auto;
+    margin: 0.5em;
     margin-left: -1em;
    
 }
-
 
 
 .address-wrapper p, .email-wrapper p{
@@ -98,7 +97,13 @@
     padding:7em;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    
 }
+
+.lower-card1{
+    padding-bottom: 12em;
+}
+
 
 .lower-card2, .lower-card3{
     margin-top: 3em;
@@ -181,6 +186,11 @@
         padding: 0;
         margin: 0;
     }
+
+    .upper-card{
+
+    }
+
     .upper-card, .lower-card1, .lower-card2, .lower-card3{
         width: 100%;
         border-radius: 0;
