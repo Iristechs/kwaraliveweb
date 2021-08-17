@@ -4,6 +4,7 @@ import '../../css/business_profile.css';
 import { FaStar } from 'react-icons/fa';
 import ReactMarkdown from "react-markdown";
 import ReadMoreReact from 'read-more-react';
+import { Image, Transformation } from 'cloudinary-react';
 
 
 
@@ -16,7 +17,7 @@ const BusinessProfile=()=>{
     const local = 'http://localhost:5000'
 
     useEffect(()=>{
-        fetch(`${prod}/v1/business/search?id=${id}`, {headers : {
+        fetch(`${local}/v1/business/search?id=${id}`, {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
@@ -46,7 +47,20 @@ const BusinessProfile=()=>{
                 <div className='business-profile-wrapper'>
                     <div className='upper-card'>
                             <div className='business-logo'>
-                                <img src={businessProfile.logo}/>
+                                {   businessProfile ? 
+                                    <Image
+                    
+                                        publicId={businessProfile.logo}
+                                        secure='true'
+                                        cloud_name='daslnufbd' 
+                                        loading='lazy'
+                        
+                                        
+                                        >
+                                        
+                                    </Image> : 
+                                    <img src='../images/logo.jpg' className='business-logo'/>
+                                }
                             </div>
                                                         
                     </div>

@@ -17,7 +17,7 @@ const SearchInput=()=>{
         e.preventDefault()
         
         setSearching(true)
-        fetch(prod + '/v1/business/search?search='+query,{
+        fetch(local + '/v1/business/search?search='+query,{
             method: 'GET',
             headers:{
                 'Content-type':'application/json',

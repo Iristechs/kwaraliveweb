@@ -52,6 +52,7 @@
     align-items: center;
     height: fit-content;
     justify-content: space-evenly;
+    
 
 }
 
@@ -192,6 +193,8 @@
     transform: translate(-50%, -50%);
 }
 
+
+
 @media only screen and (max-width:570px) {
 
     .business-profile-bg{
@@ -203,9 +206,7 @@
         width: max-content;
     }
 
-    .upper-card{
-
-    }
+    
 
     .upper-card, .lower-card1, .lower-card2, .lower-card3{
         width: 100%;
@@ -224,6 +225,9 @@
         
     }
 
+    .profile-details .span{
+        margin-top: -3em;
+    }
     /*.profile-details span p{
         margin-bottom:0.4em;
         
