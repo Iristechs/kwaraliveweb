@@ -15,7 +15,7 @@
 
 .search-cont{
     
-    width: 1000px;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
