@@ -12,9 +12,11 @@ const BusinessProfile=()=>{
     const [businessProfile, setProfile] = useState([])
     const [isFetching, setFetching] = useState(true)
     const { id } = useParams()
+    const prod = 'https://kwaralive.herokuapp.com'
+    const local = 'http://localhost:5000'
 
     useEffect(()=>{
-        fetch(`https://kwaralive.herokuapp.com/v1/business/search?id=${id}`, {headers : {
+        fetch(`${prod}/v1/business/search?id=${id}`, {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
@@ -94,9 +96,6 @@ const BusinessProfile=()=>{
                                                                     color = { ratingValue <= rating.rating_value ? '#f8b26a' : 'gray'}
                                                                 />
 
-                                                                
-                                                            
-                                                            
                                                         )
                                                     })}
                                                     <p className='rating-date'>{rating.date}</p>
@@ -108,7 +107,7 @@ const BusinessProfile=()=>{
                                 </div>
                             ))}
                     </div>
-                </div> :  <div className='loader-wraper'><img className ='loader' src ='../../images/loader.gif' /></div>
+                </div> :  <div className='loader-wraper-bg'><img className ='loader-gif' src ='../../images/loader.gif' /></div>
 
                 
 

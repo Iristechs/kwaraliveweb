@@ -1,8 +1,13 @@
 .business-profile-bg{
     background: rgb(171, 189, 129, 0.3);
-    min-height: 100%;
-    width: 100%;
+    height:max-content;
+    width: 100vw; 
+}
+
+.business-profile-wrapper{
     padding: 5em;
+    height:max-content;
+    width: 100vw; 
 }
 
 .upper-card{
@@ -36,6 +41,7 @@
     color: black;
     margin-top: 10em;
     margin-left: 2em;
+    justify-content: space-between;
 
 }
 
@@ -152,9 +158,22 @@
     display: flex;
 }
 
+.loader-wraper-bg{
+    height:100vh;
+    width: inherit;
+    background: rgb(171, 189, 129, 0.3);
+}
+
+.loader-gif{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width:570px) {
 
-    .business-profile-bg{
+    .business-profile-wrapper{
         padding: 0;
         margin: 0;
     }

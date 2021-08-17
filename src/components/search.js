@@ -8,6 +8,8 @@ const SearchInput=()=>{
     const [query, setQuery] = useState('');
     const [result, setResult] = useState([]);
     const [searching, setSearching] = useState(false)
+    const prod = 'https://kwaralive.herokuapp.com'
+    const local = 'http://localhost:5000'
     
     
 
@@ -15,7 +17,7 @@ const SearchInput=()=>{
         e.preventDefault()
         
         setSearching(true)
-        fetch('https://kwaralive.herokuapp.com/v1/business/search?search='+query,{
+        fetch(prod + '/v1/business/search?search='+query,{
             method: 'GET',
             headers:{
                 'Content-type':'application/json',
