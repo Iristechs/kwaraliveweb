@@ -60,31 +60,37 @@
 
 }
 
+.address-email-wrapper{
+    display: flex;
+    flex-direction: column;
+    background: red;
+    
+}
+
 .address-wrapper, .email-wrapper{
     display: flex;
     align-items: center;
-    padding: 1em;
     margin: 0;
     width: fit-content;
 
 }
 
-.email-wrapper{
+/*.email-wrapper{
     margin-top: -1.5em;
-}
+}*/
 
 .location, .email{
     height: 2em;
-    margin: 0.5em;
-    margin-left: -1em;
+   /* margin: 0.5em;
+    margin-left: -1em;*/
    
 }
 
 
-.address-wrapper p, .email-wrapper p{
+/*.address-wrapper p, .email-wrapper p{
     margin: auto;
     margin-right: 5px;
-}
+}*/
 
 
 .lower-card1, .lower-card2, .lower-card3 {
