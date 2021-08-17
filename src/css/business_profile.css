@@ -56,10 +56,16 @@
 
 }
 
-.profile-details .span p{
-    margin: 1em;
-
+.span h3{
+    margin: auto;
 }
+
+.business-profile-categories{
+    font-weight: lighter;
+    
+}
+
+
 
 .address-email-wrapper{
     display: flex;
@@ -193,18 +199,24 @@
     transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width:340px){
+    .business-profile-bg{
+        width: max-content;
+    }
+    .business-profile-wrapper{
+        width: max-content;
+    }
+} 
 
 
 
 @media only screen and (max-width:600px) {
 
-    .business-profile-bg{
-        width: max-content;
-    }
+    
     .business-profile-wrapper{
         padding: 0;
         margin: 0;
-        width: max-content;
+        
     }
 
     
