@@ -51,7 +51,7 @@ const BusinessProfile=()=>{
                             </div>
                             
                             <div className='profile-details'>
-                                <span><h3 className='owners-name'>{businessProfile.business_name}  . </h3> <p className='business-profile-categories'>{businessProfile.category}</p></span>
+                                <div className='span'><h3 className='owners-name'>{businessProfile.business_name}  . </h3> <p className='business-profile-categories'>{businessProfile.category}</p></div>
                                 
                                 <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
                                 <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>

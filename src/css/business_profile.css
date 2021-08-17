@@ -36,24 +36,28 @@
 }
 
 .profile-details{
+    width: fit-content;
     display: flex;
     flex-direction: column;
     color: black;
     margin-top: 10em;
     margin-left: 2em;
     justify-content: space-between;
+    
 
 }
 
-.profile-details span{
+.profile-details .span{
     display: flex;
     align-items: center;
-    
+    height: fit-content;
+    justify-content: space-evenly;
+
 }
 
-.profile-details span p{
-    margin: auto;
-    margin-left: 1em;
+.profile-details .span p{
+    margin: 1em;
+
 }
 
 .address-wrapper, .email-wrapper{
