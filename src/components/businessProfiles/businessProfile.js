@@ -17,7 +17,7 @@ const BusinessProfile=()=>{
     const local = 'http://localhost:5000'
 
     useEffect(()=>{
-        fetch(`${local}/v1/business/search?id=${id}`, {headers : {
+        fetch(`${prod}/v1/business/search?id=${id}`, {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
         }
