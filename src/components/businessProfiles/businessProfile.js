@@ -15,8 +15,13 @@ const BusinessProfile=()=>{
     const { id } = useParams()
     const prod = 'https://kwaralive.herokuapp.com'
     const local = 'http://localhost:5000'
+    var verification;
+
+    
+    
 
     useEffect(()=>{
+
         fetch(`${prod}/v1/business/search?id=${id}`, {headers : {
             crossDomain:true, 
             'Accept': 'application/json'
@@ -30,11 +35,33 @@ const BusinessProfile=()=>{
                 data => {
                     setProfile(data.search_result[0])
                     setFetching(false)
-                    
-                    
+           
                 })
+
+               
             
     }, [id])
+
+
+
+    if ( !isFetching && businessProfile.verification_status === 'pending'){
+        verification = {
+            background:'rgba(248,178,106, 0.6)',
+            border: '2px solid rgb(248,178,106)'
+        }
+    }if (!isFetching && businessProfile.verification_status === 'unverified'){
+        verification = {
+            background:'rgba(244,126,96, .6)',
+            border: '2px solid rgb(244,126,96)'
+        }
+    }if (!isFetching && businessProfile.verification_status === 'verified'){
+        verification = {
+            background:'rgba(171,189,129, 0.5)',
+            border: '2px solid rgb(171,189,129)'
+        }
+    }
+    
+    
 
     return(
         <div className='business-profile-bg'>
@@ -47,7 +74,7 @@ const BusinessProfile=()=>{
                 <div className='business-profile-wrapper'>
                     <div className='upper-card'>
                             <div className='business-logo'>
-                                {   businessProfile ? 
+                                {   businessProfile.logo ? 
                                     <Image
                     
                                         publicId={businessProfile.logo}
@@ -59,13 +86,14 @@ const BusinessProfile=()=>{
                                         >
                                         
                                     </Image> : 
-                                    <img src='../images/logo.jpg' className='business-logo'/>
+                                    <img src='../../images/logo.jpg' className='business-logo'/>
                                 }
                             </div>
                                                         
                     </div>
 
                     <div className='lower-card1'>
+                        <div className='verification-status'><p style={verification}>{businessProfile.verification_status}</p></div>
                         <div className='profile-details'>
                             <div className='span'><h3 className='owners-name'>{businessProfile.business_name}  .  </h3> <h3 className='business-profile-categories'>{businessProfile.category}</h3></div>
                             <div className='address-email-wrapper'>

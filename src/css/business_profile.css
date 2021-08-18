@@ -8,6 +8,8 @@
     padding: 5em;
     height:max-content;
     width: 100vw; 
+    
+    
 }
 
 .upper-card{
@@ -36,13 +38,11 @@
 }
 
 .profile-details{
-    width: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     color: black;
     margin-left: -5em;
-    
-    
     
 
 }
@@ -52,6 +52,8 @@
     align-items: center;
     height: fit-content;
     justify-content: space-evenly;
+    margin-right: auto;
+    
     
 
 }
@@ -80,6 +82,8 @@
     align-items: center;
     margin: 0;
     width: fit-content;
+    margin-top: 1em;
+    
 
 }
 
@@ -100,9 +104,15 @@
 }
 
 
-.address-wrapper p, .email-wrapper p{
+.address-wrapper p{
     margin: auto;
+    margin-left: 1em;
     
+}
+
+.email-wrapper p{
+    margin: auto;
+    margin-left: 1.3em;
 }
 
 
@@ -117,12 +127,35 @@
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     
+    
 }
 
 .lower-card1{
     padding-bottom: 2em;
+    display: grid;
+    grid-gap:3em;
+    
 }
 
+.verification-status{
+    
+    width: inherit;
+    text-align: right;
+    
+    
+}
+
+.verification-status p{
+    width:fit-content;
+    margin-left: auto;
+    padding: 0.5em;
+    border-radius: 2em;
+    color: #333;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    text-align: center;
+}
 
 .lower-card2, .lower-card3{
     margin-top: 3em;
@@ -199,6 +232,8 @@
     transform: translate(-50%, -50%);
 }
 
+
+
 @media only screen and (max-width:340px){
     .business-profile-bg{
         width: max-content;
@@ -240,6 +275,8 @@
 
     .profile-details .span{
         margin-top: -3em;
+        width: 300px;
+        margin-left: -1em;
     }
     /*.profile-details span p{
         margin-bottom:0.4em;
