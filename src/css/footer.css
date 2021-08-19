@@ -1,12 +1,31 @@
 footer{
-    background-color: #333;
+    
     display: flex;
     justify-content: center;
     width: 100vw;
     margin-top: 10em;
+    flex-direction: column;
 }
 
-footer p{
-    color:whitesmoke;
+.section-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section-cont div{
+    display: flex;
+    flex-direction: column;
+    margin: 4em;
+}
+
+footer .footer-links{
+    color:rgba(0,0,0,.4);
+    padding: 0.2em;
+}
+
+.copyright{
+    text-align: center;
     padding: 1em;
+    color:rgba(0,0,0,.6);
 }

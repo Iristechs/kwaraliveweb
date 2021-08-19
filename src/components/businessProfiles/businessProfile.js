@@ -15,7 +15,7 @@ const BusinessProfile=()=>{
     const { id } = useParams()
     const prod = 'https://kwaralive.herokuapp.com'
     const local = 'http://localhost:5000'
-    var verification;
+    
 
     
     
@@ -35,6 +35,7 @@ const BusinessProfile=()=>{
                 data => {
                     setProfile(data.search_result[0])
                     setFetching(false)
+                    
            
                 })
 
@@ -43,28 +44,27 @@ const BusinessProfile=()=>{
     }, [id])
 
 
+    const handleImageClick=(src)=>{
+        var modal = document.getElementById('modal-for-image')
+        var image = document.querySelector('.image-in-modal')
 
-    if ( !isFetching && businessProfile.verification_status === 'pending'){
-        verification = {
-            background:'rgba(248,178,106, 0.6)',
-            border: '2px solid rgb(248,178,106)'
-        }
-    }if (!isFetching && businessProfile.verification_status === 'unverified'){
-        verification = {
-            background:'rgba(244,126,96, .6)',
-            border: '2px solid rgb(244,126,96)'
-        }
-    }if (!isFetching && businessProfile.verification_status === 'verified'){
-        verification = {
-            background:'rgba(171,189,129, 0.5)',
-            border: '2px solid rgb(171,189,129)'
-        }
+        image.src = src 
+        modal.style.display = 'block'
     }
+        
+
+
+    
     
     
 
     return(
         <div className='business-profile-bg'>
+
+            <div id='modal-for-image'>
+                    <button className='closer' onClick={()=>{document.getElementById('modal-for-image').style.display='none'}}>&times;</button>
+                    <Image className='image-in-modal'></Image>
+            </div>
 
 
             {
@@ -81,7 +81,7 @@ const BusinessProfile=()=>{
                                         secure='true'
                                         cloud_name='daslnufbd' 
                                         loading='lazy'
-                        
+                                       
                                         
                                         >
                                         
@@ -93,9 +93,12 @@ const BusinessProfile=()=>{
                     </div>
 
                     <div className='lower-card1'>
-                        <div className='verification-status'><p style={verification}>{businessProfile.verification_status}</p></div>
+                        <div className='verification-status'>{businessProfile.verification_status == 'verified' && <img src = '../../images/verified.png' />}</div>
                         <div className='profile-details'>
-                            <div className='span'><h3 className='owners-name'>{businessProfile.business_name}  .  </h3> <h3 className='business-profile-categories'>{businessProfile.category}</h3></div>
+                            <div className='span'>
+                                <h3 className='owners-name'>{businessProfile.business_name}</h3>
+                                <p className='business-profile-categories'>{businessProfile.category}</p>
+                            </div>
                             <div className='address-email-wrapper'>
                                 <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
                                 <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>
@@ -146,6 +149,30 @@ const BusinessProfile=()=>{
                                     
                                 </div>
                             ))}
+                    </div>
+
+                    <div className='lower-card4'>
+                        <h5 className='business-images-header'>Business Images</h5>
+                        <div className='business-images'>
+                            {
+                                businessProfile.business_images.map((image, i)=>(
+                                    <div className='business-image' key={i}>
+                                            <Image
+                            
+                                            publicId={image}
+                                            secure='true'
+                                            cloud_name='daslnufbd' 
+                                            loading='lazy'
+                                            className = 'img'
+                                            onClick={()=>handleImageClick(image)}
+                                     >
+                                            
+                                        </Image>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        
                     </div>
                 </div> :  <div className='loader-wraper-bg'><img className ='loader-gif' src ='../../images/loader.gif' /></div>
 

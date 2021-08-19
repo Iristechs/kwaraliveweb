@@ -59,13 +59,15 @@
     height: fit-content;
     justify-content: space-evenly;
     margin-right: auto;
+    flex-direction: column;
     
     
 
 }
 
-.span h3{
-    margin: auto;
+.span p{
+    margin-right: auto;
+    color:rgba(0,0,0,.4);
 }
 
 .business-profile-categories{
@@ -122,7 +124,7 @@
 }
 
 
-.lower-card1, .lower-card2, .lower-card3 {
+.lower-card1, .lower-card2, .lower-card3, .lower-card4 {
     font-weight: bold;
     background:linear-gradient(
         to left top,
@@ -139,7 +141,7 @@
 .lower-card1{
     padding-bottom: 2em;
     display: grid;
-    grid-gap:3em;
+    grid-gap:0;
     
 }
 
@@ -152,19 +154,14 @@
     
 }
 
-.verification-status p{
-    width:fit-content;
-    margin-left: auto;
-    padding: 0.5em;
-    border-radius: 2em;
-    color: #333;
-    font-weight: lighter;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 100px;
-    text-align: center;
+.verification-status img{
+    height: 2em;
+    margin-top: -1em;
+    position: absolute;
+    right: auto;
 }
 
-.lower-card2, .lower-card3{
+.lower-card2, .lower-card3, .lower-card4{
     margin-top: 3em;
     border-radius: 0.5em;
     height: fit-content;
@@ -173,7 +170,7 @@
     
 }
 
-.business-description-header{
+.business-description-header, .business-images-header{
     margin-left: -4em;
     font-weight: bold;
     
@@ -241,18 +238,91 @@
 
 
 
+.business-images{
+    width: fit-content;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    margin-left: -6em;
+    
+
+}
+
+.business-image .img{
+    width: 200px;
+    margin: 1em;
+}
 
 
+
+#modal-for-image{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.image-in-modal{
+    transition:3s;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.closer{
+    float: right;
+    border: 0;
+    background: inherit;
+    color: white;
+    font-size: 5em;
+    padding:0;
+    margin:0;
+    transition: 0.3s;
+    
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 @media only screen and (max-width:600px) {
 
+    .business-images{
+        
+        margin: auto;
+        width: auto;
+    }
+
+    .closer{
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
     
     .business-profile-wrapper{
         padding: 0;
         margin: 0;
         
     }
+
+    .verification-status img{
+        right: 0;
+    }
+    
 
     
 
@@ -270,13 +340,14 @@
 
     .profile-details .span h3{
         font-size: 1.2em;
+        margin-right: auto;
         
     }
 
     .profile-details .span{
         margin-top: -3em;
         width: 300px;
-        margin-left: -1em;
+        
     }
     /*.profile-details span p{
         margin-bottom:0.4em;
