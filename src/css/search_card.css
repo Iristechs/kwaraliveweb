@@ -1,0 +1,167 @@
+.each-search-cont{
+    background:linear-gradient(to right top, #f8b26a, #c79a4d);
+    border-radius: 1rem;
+    width: 300px;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 2em;
+    transition: 0.5s; 
+}
+
+.each-search-cont:hover{
+    transform: translateY(-10%);
+    background:linear-gradient(to right top, #f8b26a, #f8b26a);
+}
+
+.search-cont{
+    
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.form-cont{
+    position: fixed;
+    width: 100%;
+    background-image: url('../cover_images/search_bg1.png');
+    padding: 3em;
+    height: 300px;
+}
+
+.search-result-container{
+
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 25em;
+    z-index: -1;
+   
+    
+    
+
+}
+.business-search-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+    border-radius: 1rem;
+    
+    
+
+    
+    
+}
+
+
+.business-logo{
+    border-radius:50%;
+    height: 6em;
+    width: 6em;
+}
+
+.average-rating{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: fit-content;
+    padding: 0.5em;
+    
+}
+
+.rating-value{
+    color:#333;
+    margin:auto
+    
+}
+
+.star{
+    color:yellow;
+    padding: 0;
+    
+}
+
+.business-name{
+    text-align: center;
+    color:white;
+    opacity: 0.8;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.business-name:hover{
+    color: #abbd81;
+}
+
+
+.search-form{
+    
+    display: flex;
+    margin: block;
+    width: 100%;
+    position: relative;
+}
+.search-input{
+    border:none;
+    width: 100%;
+
+}
+
+.search-form button{
+    border:none;
+}
+
+.search-button{
+    width: 3em;
+}
+
+.search-heading{
+    text-align: center;
+    padding: 1em;
+    color:white;
+}
+
+.search-counter{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    top:70%;
+    left: 50%;
+    font-weight: bold;
+    z-index: -100000000;
+}
+
+#search-loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media only screen and (max-width:570px) {
+
+    .business-search-container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        
+    }
+
+    .each-search-cont{
+        width: 250px;
+    }
+
+    
+}
