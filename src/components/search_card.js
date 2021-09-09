@@ -15,7 +15,7 @@ const SearchCard = ({businesses, query, searching})=>{
             {!searching > 0 ?  
             
             <div>
-                {businesses.length > 0 && <p className='search-counter'>{businesses.length} search results found for {query}</p>}
+                {/*businesses.length > 0 && <p className='search-counter'>{businesses.length} search results found for {query}</p>*/}
                 <div className='search-cont'>
                 {
                         businesses.map((business)=>(

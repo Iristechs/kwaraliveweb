@@ -1,5 +1,21 @@
+.main-cont{
+    background:rgb(171, 189, 129, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    overflow: auto;
+    z-index: -1;
+}
+
+
 .each-search-cont{
-    background:linear-gradient(to right top, #f8b26a, #c79a4d);
+    background:linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
+    );
     border-radius: 1rem;
     width: 300px;
     justify-content: center;
@@ -8,9 +24,11 @@
     transition: 0.5s; 
 }
 
+
+
 .each-search-cont:hover{
     transform: translateY(-10%);
-    background:linear-gradient(to right top, #f8b26a, #f8b26a);
+    background:rgb(171, 189, 129, 0.3);
 }
 
 .search-cont{
@@ -25,9 +43,11 @@
 .form-cont{
     position: fixed;
     width: 100%;
-    background-image: url('../cover_images/search_bg1.png');
+    /*background-image: url('../cover_images/search_bg_copy.png');
     padding: 3em;
+    background-size: cover;*/
     height: 300px;
+    background:  rgb(171, 189, 129);
 }
 
 .search-result-container{
@@ -49,7 +69,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 2em;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
     border-radius: 1rem;
     
@@ -93,7 +112,7 @@
 
 .business-name{
     text-align: center;
-    color:white;
+    color:#333;
     opacity: 0.8;
     font-weight: bold;
     text-decoration: none;
@@ -111,10 +130,15 @@
     margin: block;
     width: 100%;
     position: relative;
+    
 }
 .search-input{
     border:none;
     width: 100%;
+    background:linear-gradient(to right bottom, 
+        rgba(255, 255, 255, 0.9), 
+        rgba(255, 255, 255, 0.3)
+        );
 
 }
 
@@ -136,10 +160,12 @@
     display: flex;
     padding: 1em;
     justify-content: center;
-    top:70%;
-    left: 50%;
-    font-weight: bold;
     z-index: -100000000;
+    color: #ffffff;
+    position: relative;
+    top:50px;
+    
+    
 }
 
 #search-loader{

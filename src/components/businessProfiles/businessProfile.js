@@ -100,7 +100,7 @@ const BusinessProfile=()=>{
                                         >
                                         
                                     </Image> : 
-                                    <img src='../../images/logo.jpg' className='business-logo'/>
+                                    <img src='../../images/logo.jpg' className='business-logo' alt=''/>
                                 }
                             </div>
                             <div className='wallet-id'>
@@ -111,15 +111,15 @@ const BusinessProfile=()=>{
                     </div>
 
                     <div className='lower-card1'>
-                        <div className='verification-status'>{businessProfile.verification_status == 'verified' && <img src = '../../images/verified.png' />}</div>
+                        <div className='verification-status'>{businessProfile.verification_status == 'verified' && <img src = '../../images/verified.png' alt=''/>}</div>
                         <div className='profile-details'>
                             <div className='span'>
                                 <h3 className='owners-name'>{businessProfile.business_name}</h3>
                                 <p className='business-profile-categories'>{businessProfile.category}</p>
                             </div>
                             <div className='address-email-wrapper'>
-                                <div className='address-wrapper'><img className='location' src='../../images/location2.png'/><p>{businessProfile.address}</p></div>
-                                <div className='email-wrapper'><img className='email' src='../../images/email.png'/><p>{businessProfile.email}</p></div>
+                                <div className='address-wrapper'><img className='location' src='../../images/location2.png' alt=''/><p>{businessProfile.address}</p></div>
+                                <div className='email-wrapper'><img className='email' src='../../images/email.png' alt=''/><p>{businessProfile.email}</p></div>
                             </div>
                                     
                         </div>
@@ -193,13 +193,13 @@ const BusinessProfile=()=>{
                                             
                                         </Image>
                                     </div>
-                                )) : <img className='no-images' src='../../images/no-image.png'/>
+                                )) : <img className='no-images' src='../../images/no-image.png' alt=''/>
                                     
                             }
                         </div>
                         
                     </div>
-                </div> :  <div className='loader-wraper-bg'><img className ='loader-gif' src ='../../images/loader.gif' /></div>
+                </div> :  <div className='loader-wraper-bg'><img className ='loader-gif' src ='../../images/loader.gif' alt=''/></div>
 
                 
 

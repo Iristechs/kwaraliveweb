@@ -51,7 +51,7 @@ const SearchInput=()=>{
                     <button><img className='search-button' src='images/search.png' alt=''/></button>
                 </form>
 
-                
+                {result.length > 0 && <p className='search-counter'>{result.length} search results found for {query}</p>}
             </div>
             
             

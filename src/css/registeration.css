@@ -1,11 +1,12 @@
 .user-form-cont{
-    background: linear-gradient(to right top, rgb(171, 189, 129), rgb(171, 189, 129, 0.8));
+    /*background: linear-gradient(to right top, rgb(171, 189, 129), rgb(171, 189, 129, 0.8));*/
     position: absolute;
     width: 100%;
     height: 100%;
     left:0;
     top:0;
     overflow: auto;
+    background:rgb(171, 189, 129, 0.3);
 }
 
 .user-reg-form{
@@ -21,10 +22,11 @@
     flex:1;
     display: flex;
     flex-direction: column;
-    background:linear-gradient(to right bottom, 
-        rgba(255, 255, 255, 0.6), 
-        rgba(255, 255, 255, 0.3)
-        );
+    background:linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
+    );
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -41,7 +43,12 @@
 
 
 .inputs{
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    /*background:linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
+    );*/
+    background:rgb(171, 189, 129, 0.6);
     margin-top: 2rem;
     padding: 3rem;
     width: 100%;
@@ -56,9 +63,10 @@
 
 
 .inputs input, .business-description, .inputs select, .inputs option {
-    background:linear-gradient(to right bottom, 
-        rgba(255, 255, 255, 0.3), 
-        rgba(255, 255, 255, 0.2)
+    background:linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
         );
         border:none;
         padding: 0.5em;
@@ -145,9 +153,9 @@
 
 
 .picture-cont, .business-picture-cont{
-    background:linear-gradient(to right bottom, 
-        rgba(255, 255, 255, 0.9), 
-        rgba(255, 255, 255, 0.1)
+    background:linear-gradient(to left bottom, 
+    rgba(171, 189, 129, 0.6), 
+    rgba(171, 189, 129, 0.2)
         );
     width: 200px;
     height: 200px;
@@ -443,6 +451,11 @@
 
         .submit-registration, .disabled {
             font-size: 11px;
+        }
+
+        .picture-cont, .business-picture-cont {
+                height: 150px;
+                width: 150px;
         }
          
 

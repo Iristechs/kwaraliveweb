@@ -230,7 +230,7 @@
 .loader-wraper-bg{
     height:100vh;
     width: inherit;
-    background: rgb(171, 189, 129, 0.3);
+    background: rgb(171, 189, 129, 0.1);
 }
 
 .loader-gif{
@@ -362,7 +362,7 @@
 
     
 
-    .upper-card, .lower-card1, .lower-card2, .lower-card3{
+    .upper-card, .lower-card1, .lower-card2, .lower-card3, .lower-card4{
         width: 100%;
         border-radius: 0;
     }
