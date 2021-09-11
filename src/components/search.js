@@ -28,7 +28,14 @@ const SearchInput=()=>{
                 return response.json()
             }
         }).then(data =>{
+
+            data.search_result.length > 0 ?
+
             setResult(data.search_result)
+
+            :
+
+            setResult(['no result'])
             setSearching(false)
         } )
 
@@ -51,7 +58,19 @@ const SearchInput=()=>{
                     <button><img className='search-button' src='images/search.png' alt=''/></button>
                 </form>
 
-                {result.length > 0 && <p className='search-counter'>{result.length} search results found for {query}</p>}
+                {
+                    (result.length > 0 && result[0] !== 'no result') ?
+                     
+                     <p className='search-counter'>{result.length} search results found for {query}</p>
+
+                     :
+
+                     (result.length > 0 && result[0] === 'no result') && <p className='search-counter'>no search results found for {query}</p>
+
+            
+
+                     
+                }
             </div>
             
             

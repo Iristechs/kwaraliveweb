@@ -12,7 +12,7 @@ const SearchCard = ({businesses, query, searching})=>{
         
          <div className='search-result-container'>
             
-            {!searching > 0 ?  
+            {(!searching > 0 && businesses[0] !== 'no result') ?  
             
             <div>
                 {/*businesses.length > 0 && <p className='search-counter'>{businesses.length} search results found for {query}</p>*/}
@@ -48,8 +48,12 @@ const SearchCard = ({businesses, query, searching})=>{
                 </div>
                     
             </div>
-             : 
-             <div className='loader-wraper' id='search-loader'><img className ='loader' src ='../images/loader.gif' /></div>
+             :
+             
+             (businesses[0] === 'no result') ?
+             <></>
+             :
+             <div className='loader-wraper' id='search-loader'><img className ='loader' src ='../images/loader.gif' alt=''/></div>
         }
         </div>
             
