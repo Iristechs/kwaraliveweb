@@ -19,7 +19,7 @@
     border-radius: 1rem;
     width: 300px;
     justify-content: center;
-    height: auto;
+    height: 100%;
     margin-bottom: 2em;
     transition: 0.5s; 
 }
@@ -65,7 +65,7 @@
 .business-search-container{
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: inherit;
     justify-content: space-between;
     align-items: center;
     padding: 2em;

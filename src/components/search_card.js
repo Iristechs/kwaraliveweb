@@ -37,7 +37,17 @@ const SearchCard = ({businesses, query, searching})=>{
                                      >
                                         
                                         </Image> : <img src='../images/logo.jpg' className='business-logo' alt='loading..'/>}
-                                    <Link to={'/business-profile/' + Date.now().toString().slice(0,5) + business.id + Date.now().toString().slice(5,11) + '/'+business.business_name} className='business-name'>{business.business_name}</Link>
+                                    <Link to={'/business-profile/' + Date.now().toString().slice(0,5) + business.id + Date.now().toString().slice(5,11) + '/'+business.business_name} className='business-name'>{
+                                    
+                                    business.business_name.length < 18 ?
+
+                                    business.business_name
+
+                                    :
+
+                                    business.business_name.slice(0,18) + '...'
+                                    
+                                    }</Link>
                                     
                                     
                                 </div>
